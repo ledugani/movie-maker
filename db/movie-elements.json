@@ -1,0 +1,220 @@
+{
+  "elements": [
+    {
+      "id": "item0",
+      "categoryId": "actors",
+      "name":"John C. Reilly",
+      "cost": "5006"
+    },
+    {
+      "id": "item1",
+      "categoryId": "actors",
+      "name":"Mark Wahlberg",
+      "cost": "3498"
+    },
+    {
+      "id": "item2",
+      "categoryId": "actors",
+      "name":"Jason Statham",
+      "cost": "10800"
+    },
+    {
+      "id": "item3",
+      "categoryId": "actors",
+      "name":"Will Ferrell",
+      "cost": "12080"
+    },
+    {
+      "id": "item4",
+      "categoryId": "actors",
+      "name":"Jeff Goldblum",
+      "cost": "50300"
+    },
+    {
+      "id": "item5",
+      "categoryId": "actors",
+      "name":"Kyle MacLachlan",
+      "cost": "67009"
+    },
+    {
+      "id": "item6",
+      "categoryId": "actors",
+      "name":"Malcolm McDowell",
+      "cost": "34006"
+    },
+    {
+      "id": "item7",
+      "categoryId": "actors",
+      "name":"Bill Murray",
+      "cost": "34700"
+    },
+    {
+      "id": "item8",
+      "categoryId": "actors",
+      "name":"Michael Cera",
+      "cost": "28000"
+    },
+    {
+      "id": "item9",
+      "categoryId": "animals",
+      "name":"Panda",
+      "cost": "40000"
+    },
+    {
+      "id": "item10",
+      "categoryId": "animals",
+      "name":"Baboon",
+      "cost": "32000"
+    },
+    {
+      "id": "item11",
+      "categoryId": "animals",
+      "name":"Armadillo",
+      "cost": "23000"
+    },
+    {
+      "id": "item12",
+      "categoryId": "animals",
+      "name":"Tardigrade",
+      "cost": "200000"
+    },
+    {
+      "id": "item13",
+      "categoryId": "animals",
+      "name":"Platypus",
+      "cost": "80009"
+    },
+    {
+      "id": "item14",
+      "categoryId": "animals",
+      "name":"Axolotl",
+      "cost": "24700"
+    },
+    {
+      "id": "item15",
+      "categoryId": "animals",
+      "name":"Saiga Antelope",
+      "cost": "80000"
+    },
+    {
+      "id": "item16",
+      "categoryId": "animals",
+      "name":"Cow",
+      "cost": "1000"
+    },
+    {
+      "id": "item17",
+      "categoryId": "animals",
+      "name":"Slow Loris",
+      "cost": "3400"
+    },
+    {
+      "id": "item18",
+      "categoryId": "locations",
+      "name":"Hawkins, Indiana",
+      "cost": "27000"
+    },
+    {
+      "id": "item19",
+      "categoryId": "locations",
+      "name":"Twin Peaks, WA",
+      "cost": "72000"
+    },
+    {
+      "id": "item20",
+      "categoryId": "locations",
+      "name":"Pawnee, Indiana",
+      "cost": "2000"
+    },
+    {
+      "id": "item21",
+      "categoryId": "locations",
+      "name":"The Shire, Hobbiton",
+      "cost": "203000"
+    },
+    {
+      "id": "item22",
+      "categoryId": "locations",
+      "name":"Gotham City, New Jersey",
+      "cost": "67000"
+    },
+    {
+      "id": "item23",
+      "categoryId": "locations",
+      "name":"Mos Eisley, Tatooine",
+      "cost": "201000"
+    },
+    {
+      "id": "item24",
+      "categoryId": "locations",
+      "name":"Maui, Hawaii",
+      "cost": "2000"
+    },
+    {
+      "id": "item25",
+      "categoryId": "locations",
+      "name":"Paris, France",
+      "cost": "1500"
+    },
+    {
+      "id": "item26",
+      "categoryId": "locations",
+      "name":"Murfreesboro, TN",
+      "cost": "200"
+    },
+    {
+      "id": "item27",
+      "categoryId": "specialfx",
+      "name":"Explosions",
+      "cost": "5000"
+    },
+    {
+      "id": "item28",
+      "categoryId": "specialfx",
+      "name":"Monster Makeup",
+      "cost": "9000"
+    },
+    {
+      "id": "item29",
+      "categoryId": "specialfx",
+      "name":"Computer-Generated Imagery",
+      "cost": "90000"
+    },
+    {
+      "id": "item30",
+      "categoryId": "specialfx",
+      "name":"Dolly Zoom",
+      "cost": "20000"
+    },
+    {
+      "id": "item31",
+      "categoryId": "specialfx",
+      "name":"Green Screen",
+      "cost": "3000"
+    },
+    {
+      "id": "item32",
+      "categoryId": "specialfx",
+      "name":"Wire Removal",
+      "cost": "5000"
+    },
+    {
+      "id": "item33",
+      "categoryId": "specialfx",
+      "name":"Match Moving",
+      "cost": "3400"
+    },
+    {
+      "id": "item34",
+      "categoryId": "specialfx",
+      "name":"Animatronics",
+      "cost": "70000"
+    },
+    {
+      "id": "item35",
+      "categoryId": "specialfx",
+      "name":"Computer Animation",
+      "cost": "5600"
+    }
+  ]
+}
