@@ -1,7 +1,7 @@
 const categoriesOutputDiv = document.getElementById('categories');
 
 const domString = (categories) => {
-  let buildDomString = 'Movie Making Budget Planner';
+  let buildDomString = '<h1>Movie Making Budget Planner</h1>';
   categories.forEach((category) => {
     buildDomString += `<h3>${category.categoryName}</h3>`;
   });

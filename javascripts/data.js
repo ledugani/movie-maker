@@ -1,22 +1,25 @@
-const loadCategories = require('./categories');
-const printToDom = require('./dom');
+let categories = [];
+let elements = [];
 
-let categoriesArray = [];
-
-const categorySuccess = function () {
-  categoriesArray = JSON.parse(this.responseText).categories;
-  // console.log(categoriesArray);
-  printToDom(categoriesArray);
+const setCategories = (categoriesArray) => {
+  categories = categoriesArray;
 };
 
-const errorLoading = function () {
-  console.error('shit broke');
+const getCategories = () => {
+  return categories;
 };
 
-const initializer = () => {
-  loadCategories(categorySuccess, errorLoading);
+const setElements = (elementsArray) => {
+  elements = elementsArray;
+};
+
+const getElements = () => {
+  return elements;
 };
 
 module.exports = {
-  initializer,
+  setCategories,
+  getCategories,
+  setElements,
+  getElements,
 };
