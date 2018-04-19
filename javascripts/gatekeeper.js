@@ -15,7 +15,7 @@ const elementSuccess = function () {
 };
 
 const errorLoading = function () {
-  console.error('shit broke');
+  console.error('something is not working right');
 };
 
 const initializer = () => {
