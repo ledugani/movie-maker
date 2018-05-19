@@ -1,7 +1,7 @@
 const loadCategories = require('./categories');
 const loadElements = require('./elements');
-const printToDom = require('./defaultDom');
-const events = require('./budgetDom');
+const printToDom = require('./dom');
+const events = require('./events');
 const data = require('./data');
 
 const categorySuccess = function () {
