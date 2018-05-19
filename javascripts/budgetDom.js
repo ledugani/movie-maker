@@ -1,5 +1,6 @@
 const outputDiv = document.getElementById('budget');
 const button = document.getElementById('button');
+const checkBoxes = document.getElementsByName('checkbox');
 
 const addEvent = () => {
   button.addEventListener('click', () => {
@@ -8,6 +9,9 @@ const addEvent = () => {
       alert(`That's not a number, ya dingus!`);
     } else {
       outputDiv.innerHTML = `$${userInput.value}`;
+    }
+    for (let i = 0; i < checkBoxes.length; i++) {
+      checkBoxes[i].removeAttribute('disabled');
     }
   });
 };

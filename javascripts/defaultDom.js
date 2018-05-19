@@ -10,8 +10,8 @@ const domString = (categories, elements) => {
     elements.forEach((element) => {
       if (`${element.categoryId}` === `${category.id}`) {
         buildDomString += `<div>`;
-        buildDomString +=   `<input id="${element.id}" type="checkbox">`;
-        buildDomString +=   `<label for="${element.id}"> ${element.name}</label>`;
+        buildDomString +=   `<input id="${element.id}" type="checkbox" name="checkbox" disabled>`;
+        buildDomString +=   `<label for="${element.id}">&nbsp;${element.name}</label>`;
         buildDomString += `</div>`;
       }
     });
