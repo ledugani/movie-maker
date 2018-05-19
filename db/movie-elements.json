@@ -117,7 +117,7 @@
     {
       "id": "item19",
       "categoryId": "locations",
-      "name":"Twin Peaks, WA",
+      "name":"Twin Peaks, Washington",
       "cost": "72000"
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "item26",
       "categoryId": "locations",
-      "name":"Murfreesboro, TN",
+      "name":"Murfreesboro, Tennessee",
       "cost": "200"
     },
     {
