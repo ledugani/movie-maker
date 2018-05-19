@@ -1,0 +1,18 @@
+body {
+  background-color: seagreen;
+  margin: 25px;
+}
+
+.panel {
+  margin: 10px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 185px;
+  right: 50px;
+}
+
+#budget {
+  color: seagreen;
+}

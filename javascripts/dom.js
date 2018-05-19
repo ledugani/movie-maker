@@ -3,15 +3,15 @@ const data = require('./data');
 const outputDiv = document.getElementById('categories');
 
 const domString = (categories, elements) => {
-  let buildDomString = '<h1>Movie Making Budget Planner</h1>';
+  let buildDomString = '';
   categories.forEach((category) => {
-    buildDomString += `<div id="${category.id}">`;
+    buildDomString += `<div id="${category.id}" class="panel col-md-4">`;
     buildDomString +=   `<h3>${category.categoryName}</h3>`;
     elements.forEach((element) => {
       if (`${element.categoryId}` === `${category.id}`) {
-        buildDomString += `<div>`;
-        buildDomString +=   `<input id="${element.id}" type="checkbox">`;
-        buildDomString +=   `<label for="${element.id}">${element.name}</label>`;
+        buildDomString += `<div class="listItem">`;
+        buildDomString +=   `<input id="${element.id}" type="checkbox" name="checkbox" disabled>`;
+        buildDomString +=   `<label for="${element.id}">&nbsp;${element.name}</label>`;
         buildDomString += `</div>`;
       }
     });

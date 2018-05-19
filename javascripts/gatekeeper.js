@@ -1,6 +1,7 @@
 const loadCategories = require('./categories');
 const loadElements = require('./elements');
 const printToDom = require('./dom');
+const events = require('./events');
 const data = require('./data');
 
 const categorySuccess = function () {
@@ -21,6 +22,7 @@ const errorLoading = function () {
 const initializer = () => {
   loadCategories(categorySuccess, errorLoading);
   loadElements(elementSuccess, errorLoading);
+  events();
 };
 
 module.exports = {
