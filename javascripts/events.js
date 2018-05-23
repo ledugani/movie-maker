@@ -24,7 +24,7 @@ const numberEvent = () => {
 
 const domStrang = (object) => {
   const budgetBox = document.getElementById('itemPrice');
-  budgetBox.innerHTML += `<div id="${object.id}">${object.name}</div>`;
+  budgetBox.innerHTML += `<div id="${object.id}">${object.name}:&nbsp;<span>$${object.cost}</span></div>`;
 };
 
 document.getElementById('entry').addEventListener('click', () => {
@@ -41,7 +41,6 @@ const addItemsToList = () => {
 
         for (let x = 0; x < elements.length; x++) {
           if (checkBoxClicked === elements[x].id) {
-            console.log(elements[x].cost);
             domStrang(elements[x]);
           };
         };
