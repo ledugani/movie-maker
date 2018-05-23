@@ -22,11 +22,6 @@ const numberEvent = () => {
   });
 };
 
-const domStrang = (object) => {
-  const budgetBox = document.getElementById('itemPrice');
-  budgetBox.innerHTML += `<div id="${object.id}">${object.name}:&nbsp;<span>$${object.cost}</span></div>`;
-};
-
 document.getElementById('entry').addEventListener('click', () => {
   addItemsToList();
 });
@@ -49,6 +44,11 @@ const addItemsToList = () => {
       };
     });
   };
+};
+
+const domStrang = (object) => {
+  const budgetBox = document.getElementById('itemPrice');
+  budgetBox.innerHTML += `<div id="${object.id}">${object.name}:&nbsp;<span>$${object.cost}</span></div>`;
 };
 
 const bindEvents = () => {
