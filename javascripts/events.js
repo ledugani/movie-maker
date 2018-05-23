@@ -1,3 +1,5 @@
+const data = require('./data');
+
 const outputDiv = document.getElementById('budget');
 const button = document.getElementById('button');
 const checkBoxes = document.getElementsByName('checkbox');
@@ -20,19 +22,31 @@ const numberEvent = () => {
   });
 };
 
-// const grabCheck = (e) => {
-//   const boop = e.target;
-//   console.log(boop);
-// };
+const grabCheck = (e) => {
+  const checkBoxClicked = e.target.id;
+  const elements = data.getElements();
+  for (let x = 0; x < elements.length; x++) {
+    if (checkBoxClicked === elements[x].id) {
+      console.log(elements[x].cost);
+    };
+  };
+};
+
+document.getElementById('entry').addEventListener('click', () => {
+  addItemsToList();
+});
 
 const addItemsToList = () => {
   const listItems = document.getElementsByClassName('listItem');
-  console.log(listItems);
+  for (let i = 0; i < listItems.length; i++) {
+    if (listItems[i].checked = true) {
+      listItems[i].addEventListener('click', grabCheck);
+    }
+  };
 };
 
 const bindEvents = () => {
   numberEvent();
-  addItemsToList();
 };
 
 module.exports = bindEvents;
