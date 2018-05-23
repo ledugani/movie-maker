@@ -22,14 +22,9 @@ const numberEvent = () => {
   });
 };
 
-const grabCheck = (e) => {
-  const checkBoxClicked = e.target.id;
-  const elements = data.getElements();
-  for (let x = 0; x < elements.length; x++) {
-    if (checkBoxClicked === elements[x].id) {
-      console.log(elements[x].cost);
-    };
-  };
+const domStrang = (object) => {
+  const budgetBox = document.getElementById('itemPrice');
+  budgetBox.innerHTML += `<div id="${object.id}">${object.name}</div>`;
 };
 
 document.getElementById('entry').addEventListener('click', () => {
@@ -39,9 +34,21 @@ document.getElementById('entry').addEventListener('click', () => {
 const addItemsToList = () => {
   const listItems = document.getElementsByClassName('listItem');
   for (let i = 0; i < listItems.length; i++) {
-    if (listItems[i].checked = true) {
-      listItems[i].addEventListener('click', grabCheck);
-    }
+    listItems[i].addEventListener('change', (e) => {
+      if (e.target.checked) {
+        const checkBoxClicked = e.target.id;
+        const elements = data.getElements();
+
+        for (let x = 0; x < elements.length; x++) {
+          if (checkBoxClicked === elements[x].id) {
+            console.log(elements[x].cost);
+            domStrang(elements[x]);
+          };
+        };
+      } else {
+        document.getElementById('itemPrice').remove(`${e.target.index}`);
+      };
+    });
   };
 };
 
