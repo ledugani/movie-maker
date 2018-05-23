@@ -22,7 +22,7 @@ const errorLoading = function () {
 const initializer = () => {
   loadCategories(categorySuccess, errorLoading);
   loadElements(elementSuccess, errorLoading);
-  events();
+  events.bindEvents();
 };
 
 module.exports = {

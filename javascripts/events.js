@@ -1,8 +1,16 @@
+const budgetEvents = require('./budget');
 const data = require('./data');
 
 const outputDiv = document.getElementById('budget');
 const button = document.getElementById('button');
 const checkBoxes = document.getElementsByName('checkbox');
+
+let newBudget = data.getBudget();
+
+const quickMaths = (budgetItem) => {
+  newBudget += budgetItem;
+  return newBudget;
+};
 
 const numberEvent = () => {
   button.addEventListener('click', () => {
@@ -13,6 +21,7 @@ const numberEvent = () => {
     } else {
       // assigns the user input as the budget
       outputDiv.innerHTML = `$${userInput.value}`;
+      data.setBudget(userInput.value);
     }
 
     // Removes disabled attribute from checkboxes one at a time
@@ -22,37 +31,12 @@ const numberEvent = () => {
   });
 };
 
-document.getElementById('entry').addEventListener('click', () => {
-  addItemsToList();
-});
-
-const addItemsToList = () => {
-  const listItems = document.getElementsByClassName('listItem');
-  for (let i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener('change', (e) => {
-      if (e.target.checked) {
-        const checkBoxClicked = e.target.id;
-        const elements = data.getElements();
-
-        for (let x = 0; x < elements.length; x++) {
-          if (checkBoxClicked === elements[x].id) {
-            domStrang(elements[x]);
-          };
-        };
-      } else {
-        document.getElementById('itemPrice').querySelector(`#${e.target.id}`).remove();
-      };
-    });
-  };
-};
-
-const domStrang = (object) => {
-  const budgetBox = document.getElementById('itemPrice');
-  budgetBox.innerHTML += `<div id="${object.id}">${object.name}:&nbsp;<span>$${object.cost}</span></div>`;
-};
-
 const bindEvents = () => {
   numberEvent();
+  budgetEvents();
 };
 
-module.exports = bindEvents;
+module.exports = {
+  bindEvents,
+  quickMaths,
+};
