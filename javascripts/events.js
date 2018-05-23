@@ -46,7 +46,7 @@ const addItemsToList = () => {
           };
         };
       } else {
-        document.getElementById('itemPrice').remove(`${e.target.index}`);
+        document.getElementById('itemPrice').querySelector(`#${e.target.id}`).remove();
       };
     });
   };
