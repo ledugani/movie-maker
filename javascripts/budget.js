@@ -1,16 +1,29 @@
 const data = require('./data');
 
 let newBudget = data.getBudget();
+let theBudgetNow = 0;
+let progress = 0;
+
+const progressBar = (currentBudget) => {
+  const totalBudget = data.getBudget();
+  theBudgetNow = currentBudget;
+  progress = (theBudgetNow / totalBudget) * 100;
+  const percentageBar = Math.floor(progress);
+  const actualProgBar = document.getElementById('progBar');
+  const percentOfProg = document.getElementById('percentage');
+  actualProgBar.style.width = `${progress}%`;
+  percentOfProg.innerHTML = `${percentageBar}%`;
+};
 
 const quickMathsAdd = (budgetItem) => {
   newBudget += (budgetItem * 1);
-  console.log(newBudget);
+  progressBar(newBudget);
   return newBudget;
 };
 
 const quickMathsSub = (budgetItem) => {
   newBudget -= (budgetItem * 1);
-  console.log(newBudget);
+  progressBar(newBudget);
   return newBudget;
 };
 
