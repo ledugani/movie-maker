@@ -11,8 +11,23 @@ const progressBar = (currentBudget) => {
   const percentageBar = Math.floor(progress);
   const actualProgBar = document.getElementById('progBar');
   const percentOfProg = document.getElementById('percentage');
-  actualProgBar.style.width = `${progress}%`;
-  percentOfProg.innerHTML = `${percentageBar}%`;
+
+  const fluffyDragon = document.getElementById('canimake');
+  if (percentageBar < 100) {
+    percentOfProg.innerHTML = `${percentageBar}%`;
+    actualProgBar.style.width = `${progress}%`;
+    actualProgBar.classList.remove('progress-bar-danger');
+    fluffyDragon.innerHTML = '';
+  } else if (percentageBar === 100) {
+    fluffyDragon.innerHTML = "You've reached your budget!";
+  } else if (percentageBar > 100) {
+    percentOfProg.innerHTML = `100%`;
+    actualProgBar.style.width = `100%`;
+    fluffyDragon.innerHTML = "Uh-oh, looks like you can't make this movie!";
+    actualProgBar.classList.remove('active');
+    actualProgBar.classList.remove('progress-bar-striped');
+    actualProgBar.classList.add('progress-bar-danger');
+  }
 };
 
 const quickMathsAdd = (budgetItem) => {
