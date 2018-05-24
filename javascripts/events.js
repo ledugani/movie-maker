@@ -5,13 +5,6 @@ const outputDiv = document.getElementById('budget');
 const button = document.getElementById('button');
 const checkBoxes = document.getElementsByName('checkbox');
 
-let newBudget = data.getBudget();
-
-const quickMaths = (budgetItem) => {
-  newBudget += budgetItem;
-  return newBudget;
-};
-
 const numberEvent = () => {
   button.addEventListener('click', () => {
     const userInput = document.getElementById('entry');
@@ -36,7 +29,4 @@ const bindEvents = () => {
   budgetEvents();
 };
 
-module.exports = {
-  bindEvents,
-  quickMaths,
-};
+module.exports = bindEvents;

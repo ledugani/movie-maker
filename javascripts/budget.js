@@ -1,5 +1,18 @@
 const data = require('./data');
-const events = require('./events');
+
+let newBudget = data.getBudget();
+
+const quickMathsAdd = (budgetItem) => {
+  newBudget += (budgetItem * 1);
+  console.log(newBudget);
+  return newBudget;
+};
+
+const quickMathsSub = (budgetItem) => {
+  newBudget -= (budgetItem * 1);
+  console.log(newBudget);
+  return newBudget;
+};
 
 document.getElementById('entry').addEventListener('click', () => {
   addItemsToList();
@@ -16,11 +29,19 @@ const addItemsToList = () => {
         for (let x = 0; x < elements.length; x++) {
           if (checkBoxClicked === elements[x].id) {
             domStrang(elements[x]);
-            events.quickMaths(elements[x].cost);
+            quickMathsAdd(elements[x].cost);
           };
         };
       } else {
-        document.getElementById('itemPrice').querySelector(`#${e.target.id}`).remove();
+        const checkBoxClicked = e.target.id;
+        const elements = data.getElements();
+
+        for (let x = 0; x < elements.length; x++) {
+          if (checkBoxClicked === elements[x].id) {
+            document.getElementById('itemPrice').querySelector(`#${e.target.id}`).remove();
+            quickMathsSub(elements[x].cost);
+          }
+        }
       };
     });
   };
